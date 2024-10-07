@@ -32,10 +32,11 @@ form {
   display: flex;
   flex-flow: column wrap;
   position: relative;
+  width: 50%;
 }
 
 form > *:not(label) {
-  margin: 1rem 0;
+  /* margin: 1rem 0; */
   padding: 0.5rem;
 }
 
