@@ -14,7 +14,7 @@
   </head>
 <body>
   <header class="header">
-    <h1></h1>
+      <button id="toggle">&#x1F31E</button>
   </header>
   
   <main>
@@ -22,19 +22,21 @@
       <h2>My First Blog</h2>
     </aside>
   
-  <form action="blog.html">
-    <section>
-    <h2>What's on your mind?</h2>
-    <label for="username">Username</label>
-    <input type="text" id="username">
-    <label for="title">Title</label>
-    <input type="text" id="title">
-    <label for="content">Content</label>
-    <textarea name="content" id="content"></textarea>
-    <p id="error"></p>
-    <input type="submit" value="Submit">
-    </section>
+    <form id="blogForm" action="blog.html">
+      <section>
+          <h2>What's on your mind?</h2>
+          <label for="username">Username</label>
+          <input type="text" id="username" required>
+          <label for="title">Title</label>
+          <input type="text" id="title" required>
+          <label for="content">Content</label>
+          <textarea name="content" id="content" required></textarea>
+          <p id="error" style="color: red;"></p>
+          <input type="submit" value="Submit">
+      </section>
   </form>
+
+  
 </main>
 
   <!-- TODO: Create landing page elements to match the mock-up provided. At the very least, include the following elements. -->

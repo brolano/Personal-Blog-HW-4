@@ -26,4 +26,37 @@ function formSubmission(event) {
     }
 
 // TODO: Add an event listener to the form on submit. Call the function to handle the form submission.
-formEl.addEventListener('submit', formSubmission);
+document.addEventListener('DOMContentLoaded', function() {
+    const blogForm = document.getElementById('blogForm');
+    const usernameInput = document.getElementById('username');
+    const titleInput = document.getElementById('title');
+    const contentInput = document.getElementById('content');
+    const errorDisplay = document.getElementById('error');
+
+    function handleFormSubmit(event) {
+        event.preventDefault();
+
+        const username = usernameInput.value.trim();
+        const title = titleInput.value.trim();
+        const content = contentInput.value.trim();
+
+        if (username === '' || title === '' || content === '') {
+            errorDisplay.textContent = 'All fields are required.';
+        } else {
+            errorDisplay.textContent = '';
+
+            console.log('Form submitted!');
+            console.log(`Username: ${username}`);
+            console.log(`Title: ${title}`);
+            console.log(`Content: ${content}`);
+
+            window.location.href = 'blog.html';
+        }
+    }
+
+    if (blogForm) {
+        blogForm.addEventListener('submit', handleFormSubmit);
+    } else {
+        console.error('Form element not found in the DOM.');
+    }
+});

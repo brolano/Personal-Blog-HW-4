@@ -11,6 +11,8 @@ toggleButton.addEventListener('click', () => {
   }
 });
 
+
+
 // TODO: Create a function called `readLocalStorage` that reads from local storage and returns the data. If no data exists, return an empty array.
 function readLocalStorage(key) {
   const data = localStorage.getItem(key);
