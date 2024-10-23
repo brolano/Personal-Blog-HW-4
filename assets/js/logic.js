@@ -4,10 +4,10 @@ const body = document.body;
 
 toggleButton.addEventListener('click', () => {
   body.classList.toggle('dark');
-  if (body.classLList.contains('dark')) {
-    toggleButton.textContent = 'Light';
-  } else {
+  if (body.classList.contains('dark')) {
     toggleButton.textContent = 'Dark';
+  } else {
+    toggleButton.textContent = 'Light';
   }
 });
 
