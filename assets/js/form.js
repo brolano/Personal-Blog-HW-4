@@ -3,10 +3,6 @@ const form = document.getElementById('form');
 const error = document.getElementById('error');
 
 // TODO: Create a function that handles the form submission. Grab the form data and store it in local storage, then redirect to the blog page using the `redirectPage` function. If the form is submitted with missing data, display an error message to the user.
-function redirectPage(url) {
-    window.location.href = url;
-}
-
 document.getElementById("blogForm").addEventListener("submit", function(event) {
     event.preventDefault();
     const username = document.getElementById("username").value;
