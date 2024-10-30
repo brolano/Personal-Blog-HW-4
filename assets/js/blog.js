@@ -54,7 +54,7 @@ function displayBlogPost () {
     }
 }
 
-window.onLoad = displayBlogPost;
+window.onload = displayBlogPost;
 
 
 // TODO: Create a function called `renderBlogList` that renders the list of blog posts if they exist. If not, call the no posts function.
