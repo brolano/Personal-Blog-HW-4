@@ -31,7 +31,7 @@ function storeLocalStorage(newPost) {
 
 // ! Use the following function whenever you need to redirect to a different page
 
-let redirectURL = '';
+let redirectURL = 'index.html';
 
 const redirectPage = function (url) {
   redirectURL = url;
