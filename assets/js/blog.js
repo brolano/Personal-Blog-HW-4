@@ -38,7 +38,6 @@ function displayBlogPost () {
     }
 }
 
-window.onload = displayBlogPost;
 
 
 // TODO: Create a function called `renderBlogList` that renders the list of blog posts if they exist. If not, call the no posts function.
@@ -61,9 +60,8 @@ function displayNoPostsMessage() {
 }
 
 // TODO: Call the `renderBlogList` function
-window.onload = renderBlogList;
 
 // TODO: Redirect to the home page using the `redirectPage` function found in logic.js when the back button is clicked
-document.addEventListener('clicked', function () {
-    location.assign(redirectURL); 
-  });
+document.getElementById('back').addEventListener('click', function () {
+    redirectPage('index.html');
+});

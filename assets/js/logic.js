@@ -5,8 +5,10 @@ const body = document.body;
 toggleButton.addEventListener('click', () => {
   body.classList.toggle('dark');
   if (body.classList.contains('dark')) {
+    document.documentElement.style.setProperty('--circle-color', '#fff');
     toggleButton.textContent = 'Dark';
   } else {
+    document.documentElement.style.setProperty('--circle-color', '');
     toggleButton.textContent = 'Light';
   }
 });
@@ -31,7 +33,7 @@ function storeLocalStorage(newPost) {
 
 // ! Use the following function whenever you need to redirect to a different page
 
-let redirectURL = 'index.html';
+let redirectURL = '';
 
 const redirectPage = function (url) {
   redirectURL = url;
